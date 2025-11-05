@@ -9,6 +9,10 @@ import BlockChainSolutions from './components/BlockChainSolutions'
 import CaseStudySection from './components/CaseStudySection'
 import TestimonialSection from './components/TestimonialSection'
 import IndustriesSection from './components/IndustriesSection'
+import ContactSection from './components/ContactSection'
+import BlogSection from './components/BlogSection'
+import OurLocation from './components/OurLocation'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -24,6 +28,11 @@ const App = () => {
     <CaseStudySection/>
     <TestimonialSection/>
     <IndustriesSection/>
+    <ContactSection/>
+    <BlogSection/>
+    <OurLocation/>
+    <Footer/>
+    
     </>
   )
 }
