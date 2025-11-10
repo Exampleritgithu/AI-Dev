@@ -33,7 +33,7 @@ const Home = () => {
               Services <ChevronDown size={18} className="ml-1" />
             </button>
             {openDropdown === "services" && (
-              <div className="absolute left-0 mt-3 w-48 bg-[#12003d] border border-purple-800 rounded-lg shadow-lg">
+              <div className="absolute left-0 mt-3 w-48 bg-[#12003d] border border-purple-800 rounded-lg shadow-lg z-50">
                 <a href="#" className="block px-4 py-2 hover:bg-purple-700 rounded-t-lg">
                   Services
                 </a>
@@ -57,7 +57,7 @@ const Home = () => {
               Pages <ChevronDown size={18} className="ml-1" />
             </button>
             {openDropdown === "pages" && (
-              <div className="absolute left-0 mt-3 w-48 bg-[#12003d] border border-purple-800 rounded-lg shadow-lg">
+              <div className="absolute left-0 mt-3 w-48 bg-[#12003d] border border-purple-800 rounded-lg shadow-lg z-50">
                 <a href="#" className="block px-4 py-2 hover:bg-purple-700 rounded-t-lg">
                   FAQ
                 </a>
@@ -80,7 +80,7 @@ const Home = () => {
               Blog <ChevronDown size={18} className="ml-1" />
             </button>
             {openDropdown === "blog" && (
-              <div className="absolute left-0 mt-3 w-48 bg-[#12003d] border border-purple-800 rounded-lg shadow-lg">
+              <div className="absolute left-0 mt-3 w-48 bg-[#12003d] border border-purple-800 rounded-lg shadow-lg z-50">
                 <a href="#" className="block px-4 py-2 hover:bg-purple-700 rounded-t-lg">
                   Blog
                 </a>
@@ -115,64 +115,73 @@ const Home = () => {
 
       {/* ✅ Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#0b0033] border-t border-purple-900 text-gray-300 px-6 py-5 space-y-4">
-          <button
-            onClick={() => toggleDropdown("services")}
-            className="flex justify-between w-full hover:text-purple-400"
-          >
-            Services <ChevronDown size={18} />
-          </button>
-          {openDropdown === "services" && (
-            <div className="ml-4 space-y-2">
-              <a href="#" className="block hover:text-purple-400">
-                Services
-              </a>
-              <a href="#" className="block hover:text-purple-400">
-                Service Details
-              </a>
-            </div>
-          )}
+        <div className="md:hidden bg-[#0b0033] border-t border-purple-900 text-gray-300 px-6 py-5 space-y-4 z-40 relative">
+          {/* Services Dropdown */}
+          <div>
+            <button
+              onClick={() => toggleDropdown("services")}
+              className="flex justify-between w-full hover:text-purple-400"
+            >
+              Services <ChevronDown size={18} />
+            </button>
+            {openDropdown === "services" && (
+              <div className="ml-4 mt-2 space-y-2">
+                <a href="#" className="block hover:text-purple-400">
+                  Services
+                </a>
+                <a href="#" className="block hover:text-purple-400">
+                  Service Details
+                </a>
+              </div>
+            )}
+          </div>
 
           <a href="#" className="block hover:text-purple-400">
             About
           </a>
 
-          <button
-            onClick={() => toggleDropdown("pages")}
-            className="flex justify-between w-full hover:text-purple-400"
-          >
-            Pages <ChevronDown size={18} />
-          </button>
-          {openDropdown === "pages" && (
-            <div className="ml-4 space-y-2">
-              <a href="#" className="block hover:text-purple-400">
-                FAQ
-              </a>
-              <a href="#" className="block hover:text-purple-400">
-                Shop
-              </a>
-              <a href="#" className="block hover:text-purple-400">
-                Privacy Policy
-              </a>
-            </div>
-          )}
+          {/* Pages Dropdown */}
+          <div>
+            <button
+              onClick={() => toggleDropdown("pages")}
+              className="flex justify-between w-full hover:text-purple-400"
+            >
+              Pages <ChevronDown size={18} />
+            </button>
+            {openDropdown === "pages" && (
+              <div className="ml-4 mt-2 space-y-2">
+                <a href="#" className="block hover:text-purple-400">
+                  FAQ
+                </a>
+                <a href="#" className="block hover:text-purple-400">
+                  Shop
+                </a>
+                <a href="#" className="block hover:text-purple-400">
+                  Privacy Policy
+                </a>
+              </div>
+            )}
+          </div>
 
-          <button
-            onClick={() => toggleDropdown("blog")}
-            className="flex justify-between w-full hover:text-purple-400"
-          >
-            Blog <ChevronDown size={18} />
-          </button>
-          {openDropdown === "blog" && (
-            <div className="ml-4 space-y-2">
-              <a href="#" className="block hover:text-purple-400">
-                Blog
-              </a>
-              <a href="#" className="block hover:text-purple-400">
-                Blog Details
-              </a>
-            </div>
-          )}
+          {/* Blog Dropdown */}
+          <div>
+            <button
+              onClick={() => toggleDropdown("blog")}
+              className="flex justify-between w-full hover:text-purple-400"
+            >
+              Blog <ChevronDown size={18} />
+            </button>
+            {openDropdown === "blog" && (
+              <div className="ml-4 mt-2 space-y-2">
+                <a href="#" className="block hover:text-purple-400">
+                  Blog
+                </a>
+                <a href="#" className="block hover:text-purple-400">
+                  Blog Details
+                </a>
+              </div>
+            )}
+          </div>
 
           <div className="pt-4 border-t border-purple-800">
             <div className="flex items-center gap-2 text-sm text-gray-300">
@@ -208,7 +217,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Background & Overlay */}
+      {/* ✅ Background & Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40 pointer-events-none"
         style={{ backgroundImage: "url('/Bg-home.jpg')" }}
