@@ -48,7 +48,7 @@ const FAQSection = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white">
-            Service Details
+            FAQ Details
           </h1>
         </div>
       </section>

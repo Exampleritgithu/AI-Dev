@@ -72,13 +72,13 @@ const Navbar = () => {
                 FAQ
               </Link>
               <Link
-                to="/pages/shop"
+                to="/pages/team"
                 className="block px-4 py-2 hover:bg-purple-700"
               >
-                Shop
+                Team
               </Link>
               <Link
-                to="/pages/privacy-policy"
+                to="/pages/privacy"
                 className="block px-4 py-2 hover:bg-purple-700 rounded-b-lg"
               >
                 Privacy Policy

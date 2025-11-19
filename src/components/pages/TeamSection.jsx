@@ -5,17 +5,32 @@ const teamMembers = [
   {
     name: "Richard Jackson",
     role: "Chief Executive Officer",
-    image: "/team1.jpg", // Replace with your actual image path
+    image: "/team-1.png", // Replace with your actual image path
   },
   {
     name: "Laura Martinez",
     role: "Managing Director",
-    image: "/team2.jpg",
+    image: "/team-2.png",
   },
   {
     name: "Jennifer Brown",
     role: "Operation Officer",
-    image: "/team3.jpg",
+    image: "/team-3.png",
+  },
+  {
+    name: "Richard Jackson",
+    role: "Chief Executive Officer",
+    image: "/team-4.png", // Replace with your actual image path
+  },
+  {
+    name: "Laura Martinez",
+    role: "Managing Director",
+    image: "/team-5.png",
+  },
+  {
+    name: "Jennifer Brown",
+    role: "Operation Officer",
+    image: "/team-6.png",
   },
 ];
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import SeoSection from './components/SeoSection';
@@ -16,21 +15,17 @@ import ContactSection from './components/ContactSection';
 import BlogSection from './components/BlogSection';
 import OurLocation from './components/OurLocation';
 import Footer from './components/Footer';
-
 import AboutUs from './components/about/AboutUs';
-
 import Blogs from './components/blog/Blogs';
 import BlogCard from './components/blog/BlogCard';
 import BlogDetails from './components/blog/BlogDetails';
-import BlogsDetails from './components/blog/BlogsDetails';
-
 import ServicesDetail from './components/services/ServicesDetail';
 import Services from './components/services/Services';
-
 import FAQSection from './components/pages/FAQSection';
 import TeamSection from './components/pages/TeamSection';
 import PrivacySection from './components/pages/PrivacySction';
-
+import ServicesCard from './components/services/ServicesCard';
+import TeamHome from './components/pages/TeamHome';
 const App = () => {
   return (
     <Router>
@@ -85,19 +80,19 @@ const App = () => {
           }
         />
 
-        {/* Blog Details Page */}
+        {/* Single Blog Details Page */}
         <Route
           path="/blog/:id"
-          element={
-            <>
-              <BlogsDetails />
-              <BlogDetails />
-            </>
-          }
+          element={<BlogDetails />}
         />
 
         {/* Services Page */}
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={
+          <>
+          <Services />
+          
+          </>
+          } />
 
         {/* Services Dynamic Details Page */}
         <Route
@@ -112,7 +107,10 @@ const App = () => {
 
         {/* Pages Section */}
         <Route path="/pages/faq" element={<FAQSection />} />
-        <Route path="/pages/team" element={<TeamSection />} />
+        <Route path="/pages/team" element={<>
+        <TeamHome/>
+          <TeamSection />
+          </>} />
         <Route path="/pages/privacy" element={<PrivacySection />} />
 
       </Routes>
