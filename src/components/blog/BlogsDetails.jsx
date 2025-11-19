@@ -1,15 +1,16 @@
 import React from "react";
+import BlogDetails from "./BlogDetails";
 
-const AboutUs = () => {
+const BlogsDetails = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative w-full h-[70vh]  overflow-hidden">
+      <div className="relative w-full h-[70vh] overflow-hidden">
 
         {/* Background Image */}
         <img
-          src="about-us.jpg"
-          alt="About Banner"
+          src="Blog-1.jpg"
+          alt="Blogs Banner"
           className="w-full h-full object-cover"
         />
 
@@ -24,21 +25,20 @@ const AboutUs = () => {
             <span className="text-white/80 text-sm bg-white/10 backdrop-blur-lg px-5 py-1 rounded-full shadow-sm border border-white/10">
               <span className="hover:text-purple-300 cursor-pointer transition">Home</span>
               <span className="text-purple-400 px-1">/</span>
-              <span>About</span>
+              <span>BlogsDetails</span>
             </span>
           </div>
 
           {/* Page Heading */}
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-wide drop-shadow-lg">
-            About
+            Our BlogsDetails
           </h1>
         </div>
       </div>
 
-      {/* Content Section */}
       
     </div>
   );
 };
 
-export default AboutUs;
+export default BlogsDetails;

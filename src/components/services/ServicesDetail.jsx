@@ -1,6 +1,6 @@
 import React from "react";
 
-const Services = () => {
+const ServicesDetail = () => {
   return (
     <div className="bg-[#030026] min-h-screen text-white">
 
@@ -9,7 +9,7 @@ const Services = () => {
         className="h-[80vh] flex items-center justify-center bg-cover bg-center relative"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80')",
+            "url('/Blog-3.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[#030026]/60 to-[#0b0033]/90"></div>
@@ -20,10 +20,10 @@ const Services = () => {
               Home
             </a>
             <span>/</span>
-            <span>Services</span>
+            <span>Services Details</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white">
-            Services
+            Service Details
           </h1>
         </div>
       </section>
@@ -32,4 +32,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesDetail;
